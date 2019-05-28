@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="word">
+    <p id="first">_</p>
+    <p id="second">_</p>
+    <p id="third">_</p>
+    <p id="fourth">_</p>
+    <p id="fifth">_</p>
+    <p id="sixth">_</p>
+    <p id="seventh">_</p>
+    </div>
+ <h1 id="Lives"></h1>
+    <script> 
+    var arr = ['s', 'u', 'r', 'f', 'i', 'n', 'g'];
+    var Lives = 5; 
+   document.onkeyup = function (e) {
+       var userGuess = e.key; 
+       console.log("User input: " + userGuess); 
+
+       if (userGuess === 's'){
+           document.getElementById('first').innerHTML = "s"
+       } else if (userGuess === 'u') {
+           document.getElementById('second').innerHTML = "u"
+       }
+       else if (userGuess === 'r') {
+           document.getElementById('third').innerHTML = "r"
+       }
+       else if (userGuess === 'f') {
+           document.getElementById('fourth').innerHTML = "f"
+       }
+       else if (userGuess === 'i') {
+           document.getElementById('fifth').innerHTML = "i"
+       }
+       else if (userGuess === 'n') {
+           document.getElementById('sixth').innerHTML = "n"
+       }
+       else if (userGuess === 'g') {
+           document.getElementById('seventh').innerHTML = "g"
+       }
+   else {
+    Lives--
+    console.log(Lives)
+   }
+   document.getElementById('Lives').textContent = "Lives: " + Lives 
+   if (Lives === 0) {
+       alert("You Lose")
+   }
+   
+}
+
+   
+
+    </script>
+</body>
+</html>
